@@ -1,0 +1,30 @@
+[package]
+name = "executor-wasm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+fyrox = "0.31.0"
+client = { path = "../game" }
+wasm-bindgen = { version = "0.2.87" }
+
+[dependencies.web-sys]
+version = "0.3.64"
+features = [
+    'Document',
+    'Element',
+    'HtmlElement',
+    'Node',
+    'Window',
+    'Storage',
+    "BinaryType",
+    "Blob",
+    "ErrorEvent",
+    "FileReader",
+    "MessageEvent",
+    "ProgressEvent",
+    "WebSocket",
+]

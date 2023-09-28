@@ -1,0 +1,17 @@
+
+[package]
+name = "executor-android"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.android]
+assets = "../data"
+strip = "strip"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+fyrox = "0.31.0"
+client = { path = "../game" }
+wasm-bindgen = "0.2.87"
